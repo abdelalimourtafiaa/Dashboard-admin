@@ -84,7 +84,7 @@
                     <th>Image</th>
                     <th>Description</th>
                     <th>Prix</th>
-                    <th>id_category</th>
+                    <th>Category</th>
                     <th>Update</th>
                     <th>Delete</th>
                   </tr>

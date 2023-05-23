@@ -62,11 +62,11 @@
                 <div class="row">
                     <div class="col">
                      <label for="countries" style="color: black;">Name</label>
-                     <input list="countries" placeholder="Name of product" style="background-color: #ffffff; border:none;" name="name" class="form-control" style="color: black">
+                     <input list="countries" placeholder="Name of product" style="background-color: #ffffff;color: black; border:none;" name="name" class="form-control" style="color: black">
                     </div>
                 <div class="col">
                     <label for="banktype" style="color: black"  >Description</label>
-                    <input list="banktype" placeholder="Description of product" style="background-color: #ffffff; border:none;"  name="Description" class="form-control" style="color: black">
+                    <input list="banktype" placeholder="Description of product" style="background-color: #ffffff;color: black; border:none;"  name="Description" class="form-control" style="color: black">
                 </div>
                 </div>
             </div>
@@ -74,12 +74,17 @@
                 <div class="row">
                     <div class="col">
                     <label for="width" style="color: black">Prix</label>
-                    <input type="number" style="background-color: #ffffff; border:none;" placeholder="Prix" name="prix" class="form-control" style="color: black">
+                    <input type="number" style="background-color: #ffffff;color: black; border:none;" placeholder="Prix" name="prix" class="form-control" style="color: black">
                   </div>
                   <div class="col">
-              <label for="height" style="color: black">Category</label>
-              <input type="number" name="id_category" style="background-color: #ffffff; border:none;" placeholder="Category"  class="form-control" style="color: black">
-            </div>
+                    <label for="height" style="color: black">Category</label>
+                    <select name="id_category" class="form-control" style="color: black; background-color: #ffffff; border: none;">
+                        @foreach ($categorys as $category)
+                            <option value="{{$category->id}}">{{$category->name_category}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                
         </div>
     </div>
             

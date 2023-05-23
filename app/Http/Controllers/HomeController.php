@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use App\Models\User ;
 use Illuminate\Http\Request;
@@ -27,7 +28,8 @@ class HomeController extends Controller
 
     public function addProduct()
     {
-        return view('Admin.addProduct');
+        $categorys =  Category::all(); 
+        return view('Admin.addProduct') -> with('categorys', $categorys);
     }
 
     public function upload_product(Request $request)
@@ -37,7 +39,6 @@ class HomeController extends Controller
             $imagename=time().'.'.$image->getClientoriginalExtension();
             $request->image->move('images',$imagename);
             $pro->image=$imagename;
-
             $pro->name=$request->name;
             $pro->prix=$request->prix;
             $pro->Description=$request->Description;
@@ -49,10 +50,10 @@ class HomeController extends Controller
     }
 
     public function showproducts()
-    
         {
+
             $data=Product::all();
-            return view('admin.AllProduct',compact('data'));
+            return view('admin.AllProduct',compact('data'))-> with('data', $data);
         }
 
         public function updateProduct($id)

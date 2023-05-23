@@ -12,7 +12,7 @@
               <span class="count bg-success"></span>
             </div>
             <div class="profile-name">
-              <h5 class="mb-0 font-weight-normal">Admin</h5>
+              <h5 class="mb-0 text-dark">Admin</h5>
               <span>Gold Member</span>
             </div>
           </div>
@@ -56,7 +56,7 @@
       <li class="nav-item nav-category">
         <span class="nav-link">Navigation</span>
       </li>
-      <li class="nav-item menu-items">
+      <li class="nav-item menu-items" >
         <a class="nav-link" href="{{url('addProduct')}}">
           <span class="menu-icon">
             <i class="mdi mdi-speedometer"></i>
