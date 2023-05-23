@@ -18,6 +18,20 @@ use App\Http\Controllers\HomeController;
 Route::get('/home', [HomeController::class, 'redirect']);
 Route::get('/', [HomeController::class, 'index']);
 
+Route::get('/addProduct',[HomeController::class,'addProduct']);
+
+Route::post('/upload_product',[HomeController::class,'upload_product']);
+
+Route::get('/AllProduct',[HomeController::class,'showproducts']);
+
+Route::get('/UpdateProduct/{id}',[HomeController::class,'updateProduct']);
+
+Route::post('/edite_product/{id}',[HomeController::class,'edite_product']);
+
+Route::get('/delet_product/{id}',[HomeController::class,'delet_product']);
+
+
+
 
 Route::middleware([
     'auth:sanctum',
