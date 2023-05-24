@@ -93,7 +93,7 @@
                 <input type="file" name="image" class="form-control-file" required>
             </div>
             <div class="form-group" style="padding: 15px">
-              <button style="background-color:#00C0EF;width:50%;margin-right:22px;color: black" type="submit"  name="add_product">Valider</button>
+              <button style="background-color:#FF5252FF;width:50%;margin-right:22px;color: white" type="submit"  name="add_product">Valider</button>
             </div>
           </form>
         </div>

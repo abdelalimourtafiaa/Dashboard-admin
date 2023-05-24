@@ -46,7 +46,7 @@
                 @if (session()->has('message'))
                 <div class="alert alert-success">
                     <button type="button" class="close" data-dismiss="alert">
-                        x
+                        
                     </button>
                     {{session()->get('message')}}
     
@@ -82,7 +82,7 @@
 
         <div style="padding: 15px">
             <label for="">Old Image</label>
-            <img height="100" width="100" src="images/{{$data->image}}" alt="">
+            <img height="100" width="100" src={{$data->image}} alt="">
         </div>
                 
                   <div class="form-group" style="padding: 15px">

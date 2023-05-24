@@ -94,7 +94,7 @@
                   @foreach ($data as $item)
                   <tr>
                     <td>{{$item->name}}</td>
-                    <td><img class="rounded-0" style="height: 40px; width: 80px;" src="images/{{$item->image}}" alt=""></td>
+                    <td><img class="rounded-0" style="height: 40px; width: 80px;" src={{$item->image}} alt=""></td>
                     <td>{{$item->description}}</td>
                     <td>{{$item->prix}} DH</td>
                     <td>{{$item->id_category}}</td>

@@ -7,6 +7,8 @@ use App\Models\Product;
 use App\Models\User ;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\URL;
+
 
 
 class HomeController extends Controller
@@ -38,7 +40,7 @@ class HomeController extends Controller
             $image=$request->image;
             $imagename=time().'.'.$image->getClientoriginalExtension();
             $request->image->move('images',$imagename);
-            $pro->image=$imagename;
+            $pro->image=URL::to('/').'/images/'.$imagename;
             $pro->name=$request->name;
             $pro->prix=$request->prix;
             $pro->Description=$request->Description;
