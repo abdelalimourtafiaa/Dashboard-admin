@@ -30,6 +30,9 @@ Route::post('/edite_product/{id}',[HomeController::class,'edite_product']);
 
 Route::get('/delet_product/{id}',[HomeController::class,'delet_product']);
 
+Route::get('/Orders',[HomeController::class,'showOrders']);
+
+
 
 
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\User ;
 use Illuminate\Http\Request;
@@ -76,7 +77,10 @@ class HomeController extends Controller
             $image=$request->image;
             $imagename=time().'.'.$image->getClientoriginalExtension(); 
             $request->image->move('images',$imagename);
-            $data->image=$imagename;
+            $data->image=URL::to('/').'/images/'.$imagename;
+
+            
+            
 
             $data->save();
 
@@ -90,6 +94,13 @@ class HomeController extends Controller
             $data=Product::find($id);
             $data->delete(); 
             return redirect()->back();   
+        }
+
+        public function showOrders()
+        {
+
+            $data=Order::all();
+            return view('admin.Orders',compact('data'))-> with('data', $data);
         }
     
 }

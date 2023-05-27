@@ -5,21 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Order extends Model
+class table extends Model
 {
     use HasFactory;
 
-    protected $table = 'order_list';
+    protected $table = 'table_reastau';
 
     protected $fillable = [
         'name',
-        'prix',
-        'image',
+        'id',
     ];
 
-    public function table()
+    public function orders()
     {
-        return $this->belongsTo(table::class);
+        return $this->hasMany(Order::class);
     }
-
 }

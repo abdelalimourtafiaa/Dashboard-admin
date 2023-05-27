@@ -23,6 +23,9 @@ Route::get('/getCategory',[CategorieController::class,'getCategories']);
 
 Route::post('/order', [OrderController :: class,'addOrder']);
 
+Route::post('/table', [tableController :: class,'addnumber']);
+
+
 
 Route::group(['middleware' => ['auth:sanctum']],function(){
 
