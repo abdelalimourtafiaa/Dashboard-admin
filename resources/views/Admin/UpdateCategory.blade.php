@@ -53,43 +53,22 @@
                 </div>
                 
             @endif
-            <form action="{{ url('edite_product',$data->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('edite_categorie',$data->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group" style="padding: 15px">
                     <div class="row">
                         <div class="col">
-                         <label for="countries" style="color: black;">Name</label>
-                         <input list="countries" value="{{$data->name}}" placeholder="Name of product" style="background-color: #ffffff;color: black; border:none;" name="name" class="form-control" style="color: black">
+                         <label for="countries" style="color: black;">Nome de categorie </label>
+                         <input list="countries" value="{{$data->name_category}}" placeholder="Name of product" style="background-color: #ffffff;color: black; border:none;" name="name" class="form-control" style="color: black">
                         </div>
-                    <div class="col">
-                        <label for="banktype" style="color: black"  >Description</label>
-                        <input list="banktype" value="{{$data->description}}" placeholder="Description of product" style="background-color: #ffffff;color: black; border:none;"  name="description" class="form-control" style="color: black">
-                    </div>
+                    
                     </div>
                 </div>
-                <div class="form-group" style="padding: 15px">
-                    <div class="row">
-                        <div class="col">
-                        <label for="width" style="color: black">Prix</label>
-                        <input type="number" value="{{$data->prix}}" style="background-color: #ffffff;color: black; border:none;" placeholder="Prix" name="prix" class="form-control" style="color: black">
-                      </div>
-                      <div class="col">
-                        <label for="height" style="color: black">Category</label>
-                        <select name="id_category" class="form-control" style="color: black; background-color: #ffffff; border: none;">
-                          @foreach ($categorys as $category)
-                            <option value="{{ $category->id }}" {{ $category->id == $data->id_category ? 'selected' : '' }}>
-                              {{ $category->name_category }}
-                            </option>
-                          @endforeach
-                        </select>
-                      </div>
-                      
-            </div>
-        </div>
+              
 
         <div style="padding: 15px">
             <label for="">Old Image</label>
-            <img height="100" width="100" src={{$data->image}} alt="">
+            <img height="100" width="100" src={{$data->icon}} alt="">
         </div>
                 
                   <div class="form-group" style="padding: 15px">

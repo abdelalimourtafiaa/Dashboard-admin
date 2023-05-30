@@ -54,16 +54,15 @@ class HomeController extends Controller
 
     public function showproducts()
         {
-
             $data=Product::all();
             return view('admin.AllProduct',compact('data'))-> with('data', $data);
         }
 
         public function updateProduct($id)
-    
         {
+            $categorys =  Category::all(); 
             $data=Product::find($id);
-             return view('admin.Update',compact('data'));
+            return view('admin.Update',compact('data'))-> with('categorys', $categorys);
         }
 
         public function edite_product(Request $request,$id)
@@ -79,14 +78,9 @@ class HomeController extends Controller
             $request->image->move('images',$imagename);
             $data->image=URL::to('/').'/images/'.$imagename;
 
-            
-            
-
             $data->save();
 
             return redirect()->back();
-            
-        
         }
 
         public function delet_product($id)
@@ -98,9 +92,70 @@ class HomeController extends Controller
 
         public function showOrders()
         {
-
             $data=Order::all();
             return view('admin.Orders',compact('data'))-> with('data', $data);
         }
+
+
+        public function upload_categorie(Request $request)
+        {
+            $cate=new Category();
+                $image=$request->image;
+                $imagename=time().'.'.$image->getClientoriginalExtension();
+                $request->image->move('images',$imagename);
+                $cate->icon=URL::to('/').'/images/'.$imagename;
+                $cate->name_category=$request->name;
+                
+                $cate->save();
+    
+              return redirect()->back();
+        }
+
+        public function addCategory()
+    {
+        $categorys =  Category::all(); 
+        return view('Admin.addCategory') ;
+    }
+
+
+    public function showcategory()
+        {
+
+            $data=Category::all();
+            return view('admin.AllCategories',compact('data'))-> with('data', $data);
+        }
+
+        public function updateCategory($id)
+        {
+            $data=Category::find($id);
+             return view('admin.UpdateCategory',compact('data'));
+        }
+
+    public function edite_categorie(Request $request,$id)
+        {
+        
+            $data=Category::find($id);
+            $data->name_category=$request->name;
+            $image=$request->image;
+            $imagename=time().'.'.$image->getClientoriginalExtension(); 
+            $request->image->move('images',$imagename);
+            $data->icon=URL::to('/').'/images/'.$imagename;
+
+            
+            $data->save();
+
+            return redirect()->back();
+            
+        
+        }
+
+        public function delet_category($id)
+        {
+            $data=Category::find($id);
+            $data->delete(); 
+            return redirect()->back();   
+        }
+
+
     
 }

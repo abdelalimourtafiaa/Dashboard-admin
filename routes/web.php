@@ -32,6 +32,22 @@ Route::get('/delet_product/{id}',[HomeController::class,'delet_product']);
 
 Route::get('/Orders',[HomeController::class,'showOrders']);
 
+Route::get('/addCategory',[HomeController::class,'addCategory']);
+
+Route::post('/upload_categorie',[HomeController::class,'upload_categorie']);
+
+
+Route::get('/AllCategories',[HomeController::class,'showcategory']);
+
+Route::get('/UpdateCategory/{id}',[HomeController::class,'updateCategory']);
+
+Route::post('/edite_categorie/{id}',[HomeController::class,'edite_categorie']);
+
+Route::get('/delet_category/{id}',[HomeController::class,'delet_category']);
+
+
+
+
 
 
 
