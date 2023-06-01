@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-            <x-authentication-card-logo />
+            <img src="Admin\assets\images\yasminalogo.jpg" alt="Logo">
         </x-slot>
 
         <x-validation-errors class="mb-4" />

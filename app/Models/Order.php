@@ -11,11 +11,8 @@ class Order extends Model
 
     protected $table = 'order_list';
 
-    protected $fillable = [
-        'name',
-        'prix',
-        'image',
-    ];
+    protected $fillable = ['image', 'name', 'prix', 'id_table'];
+
 
     public function table()
     {

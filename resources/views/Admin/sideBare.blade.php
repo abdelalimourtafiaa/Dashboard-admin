@@ -1,6 +1,6 @@
-<nav class="sidebar sidebar-offcanvas" id="sidebar">
+<nav class="sidebar sidebar-offcanvas" id="sidebar" >
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-      <a class="sidebar-brand brand-logo" href="index.html"><img src="Admin/assets/images/Yasmina-removebg-preview.png" alt="logo" /></a>
+      <a class=" brand-logo" href="index.html"><img src="Admin/assets/images/Yasmina-removebg-preview.png" alt="logo" width="150" height="80"/></a>
       <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="Admin/assets/images/yasminalogo.jpg" alt="logo" /></a>
     </div>
     <ul class="nav">

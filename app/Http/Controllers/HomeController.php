@@ -54,8 +54,8 @@ class HomeController extends Controller
 
     public function showproducts()
         {
-            $data=Product::all();
-            return view('admin.AllProduct',compact('data'))-> with('data', $data);
+            $data = Product::with('category')->get();
+           return view('admin.AllProduct',compact('data'))-> with('data', $data);
         }
 
         public function updateProduct($id)

@@ -32,4 +32,13 @@ class TableController extends Controller
             'tables' => Table::all(),
         ], 200);
     }
+
+    public function getTable()
+    {
+        $table=Table::all();
+        return response()->json([
+            'table' => $table,
+            
+        ], 200);
+    }
 }

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\TableController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,11 @@ Route::get('/getCategory',[CategorieController::class,'getCategories']);
 
 Route::post('/order', [OrderController :: class,'addOrder']);
 
-Route::post('/table', [tableController :: class,'addnumber']);
+Route::post('/table', [TableController :: class,'addnumber']);
+
+Route::get('/gettable', [TableController :: class,'getTable']);
+
+
 
 
 

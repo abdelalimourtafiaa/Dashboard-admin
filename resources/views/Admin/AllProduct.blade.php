@@ -97,7 +97,13 @@
                     <td><img class="rounded-0" style="height: 40px; width: 80px;" src={{$item->image}} alt=""></td>
                     <td>{{$item->description}}</td>
                     <td>{{$item->prix}} DH</td>
-                    <td>{{$item->id_category}}</td>
+                    <td>
+                      @if ($item->category && $item->category->name_category)
+                        {{$item->category->name_category}}
+                      @else
+                        non defini
+                      @endif
+                    </td>
                  
                     <td><a style="background-color: #00C0EF" class="btn btn-success" href="{{url('UpdateProduct',$item->id)}}"><i class="fas fa-edit" style="color: white;"></i> </a></td>
                     <td><a onclick="return confirm('Are you sure you want to delete this?')" class="btn btn-danger" href="{{url('delet_product',$item->id)}}"><i class="fas fa-trash-alt"></i> </a></td>

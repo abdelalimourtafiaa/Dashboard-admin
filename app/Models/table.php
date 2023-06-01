@@ -5,15 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class table extends Model
+class Table extends Model
 {
     use HasFactory;
 
-    protected $table = 'table_reastau';
+    protected $table = 'table_resteau';
+
+    protected $primaryKey = 'id_table';
 
     protected $fillable = [
         'name',
-        'id',
     ];
 
     public function orders()
