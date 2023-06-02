@@ -80,30 +80,20 @@
               <table class="table" style="margin-top: 40px; margin-bottom: 40px">
                 <thead>
                   <tr>
-                    <th>Table</th>
-                    <th>Name</th>
-                    <th>Image</th>
-                    <th>Prix</th>
-                    <th>Date</th>
-                    
-                    
+                    <th>Nom de table</th>
+                    <th>Update</th>
+                    <th>Delete</th>
                   </tr>
                 </thead>
                 <tbody>
 
                   @foreach ($data as $item)
                   <tr>
-                    <td> @if ($item->table && $item->table->name)
-                      {{$item->table->name}}
-                    @else
-                      non defini
-                    @endif</td>
-                  
                     <td>{{$item->name}}</td>
-                    <td><img class="rounded-0" style="height: 40px; width: 80px;" src={{$item->image}} alt=""></td>
-                    <td>{{$item->prix}} DH</td>
-                    <td>{{$item->created_at}} </td>
                     
+                    <td><a style="background-color: #00C0EF" class="btn btn-success" href="{{url('UpdateTable',$item->id_table)}}"><i class="fas fa-edit" style="color: white;"></i> </a></td>
+
+                    <td><a onclick="return confirm('Are you sure you want to delete this?')" class="btn btn-danger" href="{{url('delet_table',$item->id_table)}}"><i class="fas fa-trash-alt"></i> </a></td>
                   </tr>
                   @endforeach
                   </tbody>

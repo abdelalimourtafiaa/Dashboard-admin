@@ -82,6 +82,23 @@
           <span class="menu-title">All Categories</span>
         </a>
       </li>
+
+      <li class="nav-item menu-items" >
+        <a class="nav-link" href="{{url('addTable')}}">
+          <span class="menu-icon">
+            <i class="mdi mdi-speedometer"></i>
+          </span>
+          <span  class="menu-title">Add Table</span>
+        </a>
+      </li>
+      <li class="nav-item menu-items">
+        <a class="nav-link" href="{{url('AllTables')}}">
+          <span class="menu-icon">
+            <i class="mdi mdi-playlist-play"></i>
+          </span>
+          <span class="menu-title">All Tables</span>
+        </a>
+      </li>
       
       
     </ul>

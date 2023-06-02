@@ -56,13 +56,13 @@
           </div>
           @endif
           
-          <form action="{{ url('upload_categorie') }}" method="POST" enctype="multipart/form-data">
+          <form action="{{ url('upload_table') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group" style="padding: 15px">
                 <div class="row">
                     <div class="col">
-                     <label for="countries" style="color: black;">nom de categorie </label>
-                     <input list="countries" placeholder="nom de categorie " style="background-color: #ffffff;color: black; border:none;" name="name" class="form-control" style="color: black">
+                     <label for="countries" style="color: black;">Nom de table </label>
+                     <input list="countries" placeholder="Nom de table" style="background-color: #ffffff;color: black; border:none;" name="name" class="form-control" style="color: black">
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@
             
               <div class="form-group" style="padding: 15px">
               
-                <input type="file" name="image" class="form-control-file" required>
+              
             </div>
             <div class="form-group" style="padding: 15px">
               <button style="background-color:#FF5252FF;width:50%;margin-right:22px;color: white" type="submit"  name="add_category">Valider</button>

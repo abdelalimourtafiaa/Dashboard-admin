@@ -30,12 +30,16 @@ Route::post('/edite_product/{id}',[HomeController::class,'edite_product']);
 
 Route::get('/delet_product/{id}',[HomeController::class,'delet_product']);
 
+
+
+
 Route::get('/Orders',[HomeController::class,'showOrders']);
+
+
 
 Route::get('/addCategory',[HomeController::class,'addCategory']);
 
 Route::post('/upload_categorie',[HomeController::class,'upload_categorie']);
-
 
 Route::get('/AllCategories',[HomeController::class,'showcategory']);
 
@@ -44,6 +48,17 @@ Route::get('/UpdateCategory/{id}',[HomeController::class,'updateCategory']);
 Route::post('/edite_categorie/{id}',[HomeController::class,'edite_categorie']);
 
 Route::get('/delet_category/{id}',[HomeController::class,'delet_category']);
+
+
+Route::post('/upload_table',[HomeController::class,'upload_table']);
+Route::get('/addTable',[HomeController::class,'addTable']);
+Route::get('/AllTables',[HomeController::class,'showtables']);
+Route::get('/delet_table/{id_table}',[HomeController::class,'delet_table']);
+Route::get('/UpdateTable/{id_table}',[HomeController::class,'UpdateTable']);
+Route::post('/edite_table/{id_table}',[HomeController::class,'edite_table']);
+
+
+
 
 
 

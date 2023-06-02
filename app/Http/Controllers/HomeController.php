@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Order;
 use App\Models\Product;
+use App\Models\Table;
 use App\Models\User ;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -92,7 +93,7 @@ class HomeController extends Controller
 
         public function showOrders()
         {
-            $data=Order::all();
+            $data = Order::with('table')->get();
             return view('admin.Orders',compact('data'))-> with('data', $data);
         }
 
@@ -156,6 +157,49 @@ class HomeController extends Controller
             return redirect()->back();   
         }
 
-
+        public function upload_table(Request $request)
+        {
+            $table=new Table();               
+                $table->name=$request->name;
+                $table->save();
     
+              return redirect()->back();
+        }
+
+        public function addTable()
+        {
+            $table=  Table::all(); 
+            return view('Admin.addTable') ;
+        }
+    
+        public function showtables()
+        {
+            $data=Table::all();
+            return view('admin.AllTable',compact('data'))-> with('data', $data);
+        }
+        public function delet_table($id_table)
+        {
+            $data=Table::find($id_table);
+            $data->delete(); 
+            return redirect()->back();   
+        }
+
+        public function updateTable($id_table)
+        {
+            $data=Table::find($id_table);
+             return view('admin.UpdateTable',compact('data'));
+        }
+
+    public function edite_table(Request $request,$id_table)
+        {
+        
+            $data=Table::find($id_table);
+            $data->name=$request->name;
+           
+            $data->save();
+
+            return redirect()->back();
+            
+        
+        }
 }
