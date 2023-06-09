@@ -19,7 +19,7 @@
       width: 200px;
     }
     .card {
-        height: 1170px;
+       
         width: 100%;
         color: black;
         margin-top: 30px;
@@ -75,7 +75,7 @@
                 <input type="file" name="image" class="form-control-file" required>
             </div>
             <div class="form-group" style="padding: 15px">
-              <button style="background-color:#FF5252FF;width:50%;margin-right:22px;color: white" type="submit"  name="add_category">Valider</button>
+              <button style="background-color:#FF5252FF;width:50%;margin-right:22px; color: white" type="submit"  name="add_category">Valider</button>
             </div>
           </form>
         </div>

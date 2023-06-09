@@ -20354,7 +20354,7 @@ div.tagsinput {
     -webkit-transition: width 0.25s ease, background 0.25s ease;
     -moz-transition: width 0.25s ease, background 0.25s ease;
     -ms-transition: width 0.25s ease, background 0.25s ease;
-    background: #fff;
+    background: #191c24;
     width: 244px;
     height: 70px; }
     @media (max-width: 991px) {
@@ -20623,7 +20623,7 @@ div.tagsinput {
 /* Sidebar */
 .sidebar {
   min-height: calc(100vh - 70px);
-  background: #ffffff;
+  background: #191c24;
   font-weight: normal;
   padding: 0;
   width: 244px;
@@ -20637,7 +20637,7 @@ div.tagsinput {
     -webkit-transition: width 0.25s ease, background 0.25s ease;
     -moz-transition: width 0.25s ease, background 0.25s ease;
     -ms-transition: width 0.25s ease, background 0.25s ease;
-    background: #fff;
+    background: #191c24;
     width: 244px;
     height: 70px; }
     @media (max-width: 991px) {
@@ -20651,7 +20651,7 @@ div.tagsinput {
       padding: 0rem 0rem 0rem 1.3rem;
       width: 100%; }
       .sidebar .sidebar-brand-wrapper .sidebar-brand:active, .sidebar .sidebar-brand-wrapper .sidebar-brand:focus, .sidebar .sidebar-brand-wrapper .sidebar-brand:hover {
-        color: #fc6568; }
+        color: #252b3e; }
       .sidebar .sidebar-brand-wrapper .sidebar-brand img {
         width: calc(244px - 120px);
         max-width: 100%;
@@ -20661,9 +20661,9 @@ div.tagsinput {
       .sidebar .sidebar-brand-wrapper .sidebar-brand.brand-logo-mini {
         display: none; }
         .sidebar .sidebar-brand-wrapper .sidebar-brand.brand-logo-mini img {
-          width: 50;
+          width: calc(70px - 50px);
           max-width: 100%;
-          height: 50px;
+          height: 28px;
           margin: auto; }
   .sidebar .nav {
     overflow: hidden;
@@ -20726,7 +20726,7 @@ div.tagsinput {
               font-size: inherit;
               color: inherit; }
         .sidebar .nav .nav-item .nav-link .menu-title {
-          color: black;
+          color: white;
           display: inline-block;
           font-size: 0.9375rem;
           line-height: 1;
@@ -20747,7 +20747,7 @@ div.tagsinput {
           left: 0;
           top: 0; }
         .sidebar .nav .nav-item.active > .nav-link .menu-title {
-          color: black; }
+          color: #ffffff; }
         .sidebar .nav .nav-item.active > .nav-link i {
           color: #ffffff; }
       .sidebar .nav .nav-item.nav-profile .nav-link {
@@ -20909,7 +20909,7 @@ div.tagsinput {
         .sidebar .nav.sub-menu .nav-item:hover {
           background: transparent; }
     .sidebar .nav:not(.sub-menu) > .nav-item:hover:not(.nav-category):not(.account-dropdown) > .nav-link {
-      background: #fa7777;
+      background: #00C0EF;
       color: #ffffff; }
     .sidebar .nav .menu-items:nth-child(5n+1) .nav-link .menu-icon i {
       color: #0090e7; }

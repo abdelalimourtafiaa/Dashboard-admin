@@ -105,21 +105,7 @@
                   </div>
                 
                   </div>
-                  <script>
-                    document.querySelector('.search-input').addEventListener('input', function() {
-                      var searchValue = this.value.toLowerCase();
-                      var tableRows = document.querySelectorAll('.table tbody tr');
-                
-                      tableRows.forEach(function(row) {
-                        var bankType = row.querySelector('td:nth-child(1)').textContent.toLowerCase();
-                        if (bankType.includes(searchValue)) {
-                          row.style.display = '';
-                        } else {
-                          row.style.display = 'none';
-                        }
-                      });
-                    });
-                  </script>
+           
                   <!-- container-scroller -->
                   <!-- Add Bootstrap JS -->
                   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

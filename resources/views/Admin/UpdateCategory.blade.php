@@ -19,15 +19,7 @@
       .card-body {
         padding: 0;
       }
-      .b{
-        background-color:#00C0EF;
-        height:30px ;
-         width:30%;
-         margin-right:19px;
-         
-         border-radius: 10px;
-         font-size: 18px;
-      }
+      
     </style>
     @include('admin.css')
     
@@ -76,7 +68,7 @@
                     <input type="file" name="image" class="form-control-file" required>
                 </div>
                 <div class="form-group" style="padding: 15px">
-                  <button style="background-color:#FF5252FF;width:50%;margin-right:22px;color: black" type="submit"  name="add_product">Valider</button>
+                  <button style="background-color:#FF5252FF;width:50%;margin-right:22px;color: white" type="submit"  name="add_product">Valider</button>
                 </div>
               </form>
                 </div>

@@ -19,7 +19,7 @@
       width: 200px;
     }
     .card {
-        height: 1170px;
+     
         width: 100%;
         color: black;
         margin-top: 30px;

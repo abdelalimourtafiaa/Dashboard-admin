@@ -28,10 +28,10 @@ body,html{height:100%;font-family:Inter,sans-serif;font-size:14px}
 .form-control{font-size:14px;transition:all .3s}
 .custom-checkbox{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 .form-wrapper{padding:30px 20px}
-.form-wrapper .container,.form-wrapper .container-fluid{min-height:100%}@media (max-width:500px){.form-wrapper{display:block!important;padding:20px 10px!important}}body,html{background:linear-gradient(90deg,#ff4955,#ffb14c);background-attachment:fixed}
+.form-wrapper .container,.form-wrapper .container-fluid{min-height:100%}@media (max-width:500px){.form-wrapper{display:block!important;padding:20px 10px!important}}body,html{background:linear-gradient(90deg,#fa7777,#e77f7f);background-attachment:fixed}
 .form-wrapper{display:flex;align-items:center}
 .form-wrapper,.form-wrapper .container{min-height:100%}a{color:#673ab7}a:focus,a:hover{color:#46287d}
-.btn-primary {background: linear-gradient(90deg, #e03a3c, #dfd79d)!important;border:none;border-radius:10px!important}
+.btn-primary {background: linear-gradient(90deg, #fc6568, #fa7777)!important;border:none;border-radius:10px!important}
 .custom-control-input:checked~.custom-control-label:before{background:linear-gradient(90deg,#ff4955,#673ab7)!important;border:none}
 .logo{text-align:center}.card{border:none;width:400px;margin:auto;border-radius:10px;box-shadow:0 6px 15px rgba(0,0,0,.16)}
 .card .card-body{padding:30px}

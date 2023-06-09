@@ -21,13 +21,20 @@ class HomeController extends Controller
             if(Auth::user()->usertype=='0')
             return view('Admin.dashboard');
         }
-        return view('Admin.Home');
+        $data = Product::with('category')->get();
+        return view('Admin.AllProduct',compact('data'))-> with('data', $data);
     }
 
     public function index()
     {
-        
-        return view('Auth.login');
+        if (Auth::id()) {
+            $data = Product::with('category')->get();
+            return view('Admin.AllProduct',compact('data'))-> with('data', $data);
+        }
+        else{
+             return view('Auth.login');
+        }
+       
     }
 
     public function addProduct()

@@ -1,14 +1,14 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar" >
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
       <a class=" brand-logo" href="index.html"><img src="Admin/assets/images/Yasmina-removebg-preview.png" alt="logo" width="150" height="80"/></a>
-      <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="Admin/assets/images/yasminalogo.jpg" alt="logo" /></a>
+      <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="Admin/assets/images/yasminalogo.jpg" alt="logo" width="800" height="800" /></a>
     </div>
     <ul class="nav">
       <li class="nav-item profile">
         <div class="profile-desc">
           <div class="profile-pic">
             <div class="count-indicator">
-              <img class="img-xs rounded-circle " src="Admin/assets/images/faces/face15.jpg" alt="">
+              <img class="img-xs rounded-circle " src="Admin/assets/images/yasminalogo.jpg" alt="">
               <span class="count bg-success"></span>
             </div>
             <div class="profile-name">
@@ -41,14 +41,7 @@
         </div>
       </li>
       
-      <li class="nav-item menu-items" >
-        <a class="nav-link" href="{{url('addProduct')}}">
-          <span class="menu-icon">
-            <i class="mdi mdi-speedometer"></i>
-          </span>
-          <span  class="menu-title">Add Product</span>
-        </a>
-      </li>
+      
       
       <li class="nav-item menu-items">
         <a class="nav-link" href="{{url('AllProduct')}}">
@@ -56,6 +49,14 @@
             <i class="mdi mdi-playlist-play"></i>
           </span>
           <span class="menu-title">All Products</span>
+        </a>
+      </li>
+      <li class="nav-item menu-items" >
+        <a class="nav-link" href="{{url('addProduct')}}">
+          <span class="menu-icon">
+            <i class="mdi mdi-speedometer"></i>
+          </span>
+          <span  class="menu-title">Add Product</span>
         </a>
       </li>
       <li class="nav-item menu-items">
@@ -66,6 +67,14 @@
           <span class="menu-title">Orders</span>
         </a>
       </li>
+      <li class="nav-item menu-items">
+        <a class="nav-link" href="{{url('AllCategories')}}">
+          <span class="menu-icon">
+            <i class="mdi mdi-playlist-play"></i>
+          </span>
+          <span class="menu-title">All Categories</span>
+        </a>
+      </li>
       <li class="nav-item menu-items" >
         <a class="nav-link" href="{{url('addCategory')}}">
           <span class="menu-icon">
@@ -74,12 +83,13 @@
           <span  class="menu-title">Add Category</span>
         </a>
       </li>
+      
       <li class="nav-item menu-items">
-        <a class="nav-link" href="{{url('AllCategories')}}">
+        <a class="nav-link" href="{{url('AllTables')}}">
           <span class="menu-icon">
             <i class="mdi mdi-playlist-play"></i>
           </span>
-          <span class="menu-title">All Categories</span>
+          <span class="menu-title">All Tables</span>
         </a>
       </li>
 
@@ -91,14 +101,7 @@
           <span  class="menu-title">Add Table</span>
         </a>
       </li>
-      <li class="nav-item menu-items">
-        <a class="nav-link" href="{{url('AllTables')}}">
-          <span class="menu-icon">
-            <i class="mdi mdi-playlist-play"></i>
-          </span>
-          <span class="menu-title">All Tables</span>
-        </a>
-      </li>
+      
       
       
     </ul>
